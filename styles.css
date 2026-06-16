@@ -1,0 +1,161 @@
+:root {
+  color-scheme: light;
+  --bg: #fff8ed;
+  --card: #fffdf8;
+  --text: #1f1d1a;
+  --muted: #80786f;
+  --line: #f0dfce;
+  --orange: #ff7a1a;
+  --soft: #fff0dd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background: radial-gradient(circle at top, #fffdf7 0, var(--bg) 58%);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  line-height: 1.72;
+}
+
+a {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page {
+  width: min(880px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 56px 0 72px;
+}
+
+.hero,
+.document {
+  background: rgba(255, 253, 248, 0.84);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  box-shadow: 0 24px 64px rgba(120, 82, 44, 0.12);
+}
+
+.hero {
+  margin-top: 8vh;
+  padding: 56px;
+}
+
+.document {
+  padding: 40px;
+}
+
+.eyebrow,
+.meta {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+h1 {
+  margin: 0 0 18px;
+  font-size: clamp(32px, 6vw, 52px);
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.document h1 {
+  font-size: clamp(30px, 5vw, 44px);
+}
+
+h2 {
+  margin: 34px 0 10px;
+  font-size: 22px;
+}
+
+h3 {
+  margin: 24px 0 8px;
+  font-size: 18px;
+}
+
+p,
+li {
+  font-size: 16px;
+}
+
+ul {
+  padding-left: 1.4em;
+}
+
+.lead {
+  max-width: 620px;
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 22px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.button.primary {
+  border-color: var(--orange);
+  background: var(--orange);
+  color: white;
+}
+
+.back {
+  display: inline-flex;
+  margin-bottom: 22px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.support-card {
+  margin: 28px 0;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--soft);
+}
+
+.support-card h2 {
+  margin-top: 0;
+}
+
+.footer-link {
+  margin-top: 36px;
+  font-weight: 700;
+}
+
+@media (max-width: 620px) {
+  .page {
+    width: min(100% - 24px, 880px);
+    padding: 24px 0 40px;
+  }
+
+  .hero,
+  .document {
+    border-radius: 22px;
+    padding: 26px;
+  }
+}
