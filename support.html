@@ -3,36 +3,111 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Memo Clock-记忆时钟 支持</title>
+  <title>支持 · Memo Clock-记忆时钟</title>
+  <meta name="description" content="Memo Clock-记忆时钟的常见问题和联系方式：同步、换设备、导入 Anki、手写、备份与删除。">
+  <link rel="icon" href="assets/icon-64.png">
+  <link rel="apple-touch-icon" href="assets/icon-256.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="page document">
-    <a class="back" href="index.html">Memo Clock-记忆时钟</a>
-    <p class="meta"><a href="support-en.html">English version</a></p>
-    <h1>支持</h1>
-    <p class="meta">如果你在使用 Memo Clock-记忆时钟 时遇到问题，可以通过本页面找到联系方式与常见说明。</p>
+  <header class="top">
+    <a class="brand" href="index.html"><img src="assets/icon-64.png" alt="">Memo Clock</a>
+    <nav>
+      <a href="support.html" aria-current="page">支持</a>
+      <a href="privacy.html">隐私政策</a>
+      <a href="support-en.html" lang="en" hreflang="en">English</a>
+    </nav>
+  </header>
 
-    <section class="support-card">
-      <h2>联系开发者</h2>
-      <p>邮箱：<a href="mailto:3528872473@qq.com">3528872473@qq.com</a></p>
-      <p>发送邮件时，建议附上你的 iPhone 或 iPad 型号、iOS 版本、问题截图，以及大致操作步骤。</p>
-    </section>
+  <main class="support">
+    <div class="support-side">
+      <h1 class="page-title">支持</h1>
+      <section class="contact sheet" aria-labelledby="contact-title">
+        <h2 id="contact-title">发邮件给开发者</h2>
+        <a class="mail" href="mailto:3528872473@qq.com?subject=Memo%20Clock%20%E6%94%AF%E6%8C%81">3528872473@qq.com</a>
+        <p>写上设备型号、系统版本和 App 版本（在 App 的<b class="ui">设置 › 关于</b>里），附上截图会更快。</p>
+      </section>
+      <nav class="toc" aria-label="常见问题">
+        <a href="#new-device">换了新 iPad，卡片怎么过去？</a>
+        <a href="#sync">两台设备上的内容不一样？</a>
+        <a href="#anki">怎么从 Anki 导入？</a>
+        <a href="#handwriting">手写要什么设备？写的字能搜到吗？</a>
+        <a href="#occlusion">想把一道题拍下来，遮住答案背？</a>
+        <a href="#schedule">下次什么时候复习是怎么排的？</a>
+        <a href="#reminders">收不到复习提醒？</a>
+        <a href="#backup">怎么备份？怎么删除数据？</a>
+        <a href="#storage">打开后显示“存储暂不可用”？</a>
+        <a href="#price">要另外付费吗？</a>
+      </nav>
+    </div>
 
-    <h2>常见问题</h2>
-    <h3>我的 memo 会上传到服务器吗？</h3>
-    <p>不会上传到开发者自建服务器。Memo Clock-记忆时钟 不提供账号或自建服务器；数据本地优先保存。若你的设备已登录 iCloud 且系统允许，memo、复习记录、手写图片和图片 memo 可通过 Apple iCloud/CloudKit 私有数据库在同一 Apple ID 的设备间同步。</p>
+    <div class="faq sheet">
+      <section class="qa">
+        <h2 id="new-device">换了新 iPad，卡片怎么过去？</h2>
+        <p>在新设备上登录同一个 Apple ID 并打开 iCloud，再安装、打开 Memo Clock。卡片、复习记录、手写笔记和 PDF、备忘录、今天页的小组件会自动同步过来，内容多的话要等几分钟。</p>
+        <p>打卡天数、专注时长和设置不在自动同步里：先在旧设备的<b class="ui">设置 › iCloud 同步</b>里点<b class="ui">上传到 iCloud</b>，再在新设备上点<b class="ui">从 iCloud 同步到这台设备</b>。</p>
+        <p>书桌上自由摆放的位置每台设备各自保存，不会跟过去。</p>
+      </section>
 
-    <h3>为什么收不到本地通知？</h3>
-    <p>请在系统设置中确认已经允许 Memo Clock-记忆时钟 发送通知，并在应用设置里开启通知总开关、早上提醒或晚上提醒。</p>
+      <section class="qa">
+        <h2 id="sync">两台设备上的内容不一样？</h2>
+        <ul>
+          <li>两台设备要登录同一个 Apple ID，并且都打开了 iCloud。</li>
+          <li>打开<b class="ui">设置 › iCloud 同步</b>，看<b class="ui">这台设备</b>一行：显示“自动同步”就是在同步，刚改的内容一般几分钟内到另一台；想快一点，点<b class="ui">提交本机更改</b>。</li>
+          <li>显示“只存在本机”，说明这台设备暂时没连上自动同步：先点<b class="ui">上传到 iCloud</b>，再到另一台点<b class="ui">从 iCloud 同步到这台设备</b>。</li>
+        </ul>
+        <p>还是不对，把<b class="ui">同步记录与诊断</b>这一页截图发邮件给我们。</p>
+      </section>
 
-    <h3>如何删除 memo？</h3>
-    <p>你可以在知识库中删除 memo。删除后，相关复习记录和本地图片文件也会同步清理。</p>
+      <section class="qa">
+        <h2 id="anki">怎么从 Anki 导入？</h2>
+        <ol>
+          <li>在电脑版 Anki 里导出牌组，格式选“Anki 牌组包（.apkg）”，勾选“支持旧版 Anki”（Support older Anki versions）。</li>
+          <li>把 .apkg 文件存进 iPad 的“文件”App，隔空投送或 iCloud 云盘都行。</li>
+          <li>在 Memo Clock 里点右上角的 ＋，选<b class="ui">导入 PDF 或文件</b>，选中这个文件。</li>
+        </ol>
+        <p>文字、公式、图片、填空题和你在 Anki 里的复习进度都会带过来；声音和文字格式（颜色、加粗）不会。已经有的卡片会跳过，没学过的新卡每天排 30 张。</p>
+      </section>
 
-    <h3>是否支持 AI、OCR 或云同步？</h3>
-    <p>当前 V1.0 不支持 AI 或 OCR。应用支持基于 Apple iCloud/CloudKit 的系统级同步，不提供开发者自建云服务器。</p>
+      <section class="qa">
+        <h2 id="handwriting">手写要什么设备？写的字能搜到吗？</h2>
+        <p>在 iPad 上用 Apple Pencil 写：记一条时点手写，或者新建一本手写笔记。</p>
+        <p>手写和照片里的中文、英文会在 iPad 本机自动识别，之后在书桌顶部的搜索框里就能搜到。刚写完要等一会儿才搜得到；太潦草的字可能认不出来，但笔迹本身不受影响。</p>
+      </section>
 
-    <p class="footer-link"><a href="privacy.html">查看隐私政策</a></p>
+      <section class="qa">
+        <h2 id="occlusion">想把一道题拍下来，遮住答案背？</h2>
+        <p>记一条时点图片，拍照或从相册选一张，在图上框出要遮住的地方，每个框会成为一张卡。复习时这些地方先遮着，翻开再看。</p>
+      </section>
+
+      <section class="qa">
+        <h2 id="schedule">下次什么时候复习是怎么排的？</h2>
+        <p>翻开答案后，按记得的程度点<b class="ui">忘了</b>、<b class="ui">模糊</b>、<b class="ui">记得</b>或<b class="ui">熟练</b>，每一档下面写着下次什么时候再出现：忘了的这一轮再来，越熟隔得越久，间隔由记忆算法按你的复习记录算出。</p>
+        <p>想自己改，在卡片上长按，选<b class="ui">调整复习时间</b>。每天最晚复习到几点，在<b class="ui">设置 › 复习</b>里改。</p>
+      </section>
+
+      <section class="qa">
+        <h2 id="reminders">收不到复习提醒？</h2>
+        <p>在<b class="ui">设置 › 提醒</b>里打开<b class="ui">通知提醒</b>，再选早上、晚上提醒的时间；同时在系统的“设置 › 通知”里找到 Memo Clock，允许通知。</p>
+      </section>
+
+      <section class="qa">
+        <h2 id="backup">怎么备份？怎么删除数据？</h2>
+        <p>登录 iCloud 后，内容会自动存进你自己的 iCloud；每天完成复习打卡后，还会自动上传一份学习数据，你也可以随时在<b class="ui">设置 › iCloud 同步</b>里点<b class="ui">上传到 iCloud</b>。想把一组卡另存一份或者发给同学：打开这组卡，点右上角<b class="ui">选择</b>，选好后点分享，生成的文件可以用<b class="ui">导入 PDF 或文件</b>导回来。</p>
+        <p>删除一样东西：在书桌或卡片上长按，选<b class="ui">删除</b>，会同步删掉其他设备上的同一份。想全部清除：删掉各台设备上的 Memo Clock，再到系统“设置”里点你的名字，进入 iCloud 的储存空间管理，找到 Memo Clock 删除它的数据。</p>
+        <p>具体保存了什么、存在哪里，见<a href="privacy.html">隐私政策</a>。</p>
+      </section>
+
+      <section class="qa">
+        <h2 id="storage">打开后显示“存储暂不可用”？</h2>
+        <p>App 暂停进入，是为了不让新记的内容丢失。先彻底退出 Memo Clock（在多任务界面把它划掉）再打开；还出现的话，点页面上的<b class="ui">复制诊断信息</b>，粘贴到邮件里发给我们。</p>
+      </section>
+
+      <section class="qa">
+        <h2 id="price">要另外付费吗？</h2>
+        <p>不用。买一次，全部功能都能用，没有内购、没有订阅、没有广告。同一个 Apple ID 下的 iPad 和 iPhone 都可以下载，需要 iPadOS 17 / iOS 17 或更新的系统。</p>
+      </section>
+    </div>
   </main>
 </body>
 </html>

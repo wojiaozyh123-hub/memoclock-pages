@@ -3,35 +3,111 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Memo Clock Support</title>
+  <title>Support · Memo Clock</title>
+  <meta name="description" content="Memo Clock support: syncing, moving to a new device, importing from Anki, handwriting, backups and deleting data, and how to reach the developer.">
+  <link rel="icon" href="assets/icon-64.png">
+  <link rel="apple-touch-icon" href="assets/icon-256.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="page document">
-    <a class="back" href="index.html">Memo Clock</a>
-    <h1>Support</h1>
-    <p class="meta">If you have trouble using Memo Clock, this page provides contact information and common notes.</p>
+  <header class="top">
+    <a class="brand" href="index-en.html"><img src="assets/icon-64.png" alt="">Memo Clock</a>
+    <nav>
+      <a href="support-en.html" aria-current="page">Support</a>
+      <a href="privacy-en.html">Privacy</a>
+      <a href="support.html" lang="zh-Hans" hreflang="zh-Hans">中文</a>
+    </nav>
+  </header>
 
-    <section class="support-card">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:3528872473@qq.com">3528872473@qq.com</a></p>
-      <p>When emailing, please include your iPhone or iPad model, iOS version, screenshots, and the steps that led to the issue.</p>
-    </section>
+  <main class="support">
+    <div class="support-side">
+      <h1 class="page-title">Support</h1>
+      <section class="contact sheet" aria-labelledby="contact-title">
+        <h2 id="contact-title">Email the developer</h2>
+        <a class="mail" href="mailto:3528872473@qq.com?subject=Memo%20Clock%20Support">3528872473@qq.com</a>
+        <p>Include your device model, system version and app version (in the app under <b class="ui">Settings › About</b>). A screenshot helps.</p>
+      </section>
+      <nav class="toc" aria-label="Questions">
+        <a href="#new-device">I got a new iPad. How do my cards get there?</a>
+        <a href="#sync">My two devices show different things</a>
+        <a href="#anki">How do I import from Anki?</a>
+        <a href="#handwriting">What do I need for handwriting? Can I search it?</a>
+        <a href="#occlusion">How do I photograph a problem and hide the answer?</a>
+        <a href="#schedule">How is the next review time decided?</a>
+        <a href="#reminders">I’m not getting review reminders</a>
+        <a href="#backup">How do I back up or delete my data?</a>
+        <a href="#storage">The app says “Storage unavailable”</a>
+        <a href="#price">Is there anything else to pay for?</a>
+      </nav>
+    </div>
 
-    <h2>FAQ</h2>
-    <h3>Are my memos uploaded to a server?</h3>
-    <p>They are not uploaded to developer-operated servers. Memo Clock does not provide accounts or developer-run servers; data is stored locally first. If your device is signed in to iCloud and system settings allow it, memos, review records, handwritten images, and image memos may sync across devices signed in to the same Apple ID through Apple's private iCloud/CloudKit database.</p>
+    <div class="faq sheet">
+      <section class="qa">
+        <h2 id="new-device">I got a new iPad. How do my cards get there?</h2>
+        <p>Sign in to the same Apple ID on the new device with iCloud turned on, then install and open Memo Clock. Cards, review history, handwritten notebooks and PDFs, notes and your Today widgets sync over by themselves; with a lot of content this takes a few minutes.</p>
+        <p>Check-in days, focus time and settings are not part of the automatic sync: on the old device go to <b class="ui">Settings › iCloud Sync</b> and tap <b class="ui">Upload to iCloud</b>, then on the new device tap <b class="ui">Sync from iCloud to This Device</b>.</p>
+        <p>Where you placed things on a freely arranged Desk is kept separately on each device and does not carry over.</p>
+      </section>
 
-    <h3>Why am I not receiving local notifications?</h3>
-    <p>Please make sure notifications are allowed for Memo Clock in iOS Settings, and that notifications are enabled inside the app.</p>
+      <section class="qa">
+        <h2 id="sync">My two devices show different things</h2>
+        <ul>
+          <li>Both devices need to be signed in to the same Apple ID with iCloud turned on.</li>
+          <li>Open <b class="ui">Settings › iCloud Sync</b> and look at the <b class="ui">This Device</b> row. “Automatic sync” means it is syncing, and a change usually reaches the other device within a few minutes; to hurry it along, tap <b class="ui">Submit Local Changes</b>.</li>
+          <li>“Only on this device” means this device is not connected to automatic sync right now: tap <b class="ui">Upload to iCloud</b>, then tap <b class="ui">Sync from iCloud to This Device</b> on the other one.</li>
+        </ul>
+        <p>Still not right? Email us a screenshot of the <b class="ui">Sync Record &amp; Diagnostics</b> page.</p>
+      </section>
 
-    <h3>How do I delete a memo?</h3>
-    <p>You can delete memos in the Library. Related review records and local image files are cleaned up when the memo is deleted.</p>
+      <section class="qa">
+        <h2 id="anki">How do I import from Anki?</h2>
+        <ol>
+          <li>In Anki on a computer, export the deck as “Anki Deck Package (.apkg)” and tick “Support older Anki versions”.</li>
+          <li>Save the .apkg file to the Files app on your iPad, by AirDrop or iCloud Drive.</li>
+          <li>In Memo Clock, tap ＋ at the top right, choose <b class="ui">Import PDF or File</b> and pick the file.</li>
+        </ol>
+        <p>Text, formulas, images, cloze cards and your Anki review progress come across; sounds and text formatting (colors, bold) do not. Cards you already have are skipped, and new cards you never studied are spread out at 30 a day.</p>
+      </section>
 
-    <h3>Does Memo Clock support AI, OCR, or cloud sync?</h3>
-    <p>V1.0 does not support AI or OCR. The app supports Apple iCloud/CloudKit system sync and does not provide a developer-operated cloud server.</p>
+      <section class="qa">
+        <h2 id="handwriting">What do I need for handwriting? Can I search it?</h2>
+        <p>Write on an iPad with Apple Pencil: choose handwriting when you add a card, or start a handwritten notebook.</p>
+        <p>Chinese and English in your handwriting and photos are recognized on the iPad itself, after which the search field at the top of the Desk finds them. Give it a moment after writing; very messy writing may not be recognized, but the strokes themselves are never changed.</p>
+      </section>
 
-    <p class="footer-link"><a href="privacy-en.html">View Privacy Policy</a></p>
+      <section class="qa">
+        <h2 id="occlusion">How do I photograph a problem and hide the answer?</h2>
+        <p>When adding a card, choose image, take a photo or pick one from your library, and draw boxes over what to hide. Each box becomes a card: in review the spot stays covered until you turn the card over.</p>
+      </section>
+
+      <section class="qa">
+        <h2 id="schedule">How is the next review time decided?</h2>
+        <p>After you turn a card over, grade how well you knew it: <b class="ui">Forgot</b>, <b class="ui">Vague</b>, <b class="ui">Remember</b> or <b class="ui">Mastered</b>. Under each grade you can see when the card will come back: forgotten cards return in the same round, and the better you know a card the longer the gap, worked out by the memory model from your review history.</p>
+        <p>To change it yourself, press and hold the card and choose <b class="ui">Adjust Review Time</b>. The latest time you review each day is set in <b class="ui">Settings › Review</b>.</p>
+      </section>
+
+      <section class="qa">
+        <h2 id="reminders">I’m not getting review reminders</h2>
+        <p>Turn on <b class="ui">Notifications</b> in <b class="ui">Settings › Reminders</b> and choose the morning and evening times; also allow notifications for Memo Clock in the system Settings under Notifications.</p>
+      </section>
+
+      <section class="qa">
+        <h2 id="backup">How do I back up or delete my data?</h2>
+        <p>When you are signed in to iCloud, your content is stored in your own iCloud automatically; after you complete each day’s reviews a copy of your study data is uploaded too, and you can upload at any time with <b class="ui">Settings › iCloud Sync › Upload to iCloud</b>. To keep a separate copy of a set of cards or give it to a classmate, open the set, tap <b class="ui">Select</b> at the top right, choose the cards and tap Share; the file can be brought back in with <b class="ui">Import PDF or File</b>.</p>
+        <p>To delete one thing, press and hold it on the Desk or the card and choose <b class="ui">Delete</b>; it is deleted on your other devices too. To remove everything, delete Memo Clock from each device, then in the system Settings tap your name, go to iCloud storage management, find Memo Clock and delete its data.</p>
+        <p>What exactly is stored and where is described in the <a href="privacy-en.html">Privacy Policy</a>.</p>
+      </section>
+
+      <section class="qa">
+        <h2 id="storage">The app says “Storage unavailable”</h2>
+        <p>The app pauses so that nothing you add gets lost. Quit Memo Clock completely (swipe it away in the app switcher) and open it again. If the screen comes back, tap <b class="ui">Copy diagnostics</b> on it and paste the text into an email to us.</p>
+      </section>
+
+      <section class="qa">
+        <h2 id="price">Is there anything else to pay for?</h2>
+        <p>No. Buy once and every feature is yours: no in-app purchases, subscriptions or ads. It downloads on both iPad and iPhone with the same Apple ID and needs iPadOS 17 / iOS 17 or later.</p>
+      </section>
+    </div>
   </main>
 </body>
 </html>

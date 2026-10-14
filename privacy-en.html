@@ -3,55 +3,91 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Memo Clock Privacy Policy</title>
+  <title>Privacy Policy · Memo Clock</title>
+  <meta name="description" content="What Memo Clock 2.0 stores, where it is kept, and how to delete it.">
+  <link rel="icon" href="assets/icon-64.png">
+  <link rel="apple-touch-icon" href="assets/icon-256.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="page document">
-    <a class="back" href="index.html">Memo Clock</a>
-    <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: June 16, 2026</p>
+  <header class="top">
+    <a class="brand" href="index-en.html"><img src="assets/icon-64.png" alt="">Memo Clock</a>
+    <nav>
+      <a href="support-en.html">Support</a>
+      <a href="privacy-en.html" aria-current="page">Privacy</a>
+      <a href="privacy.html" lang="zh-Hans" hreflang="zh-Hans">中文</a>
+    </nav>
+  </header>
 
-    <p>Memo Clock is a local-first memo capture and review app. We care about your privacy. The current version does not provide accounts, developer-operated remote servers, AI, OCR, or ad tracking. If your device is signed in to iCloud and system settings allow it, app data may sync across your devices signed in to the same Apple ID through Apple's private iCloud/CloudKit database.</p>
-
-    <h2>1. Data We Process</h2>
-    <p>To provide memo creation, library, review, check-in, and local reminder features, the app stores the following data on your device:</p>
-    <ul>
-      <li>Memo content, title, review prompts, categories, types, and favorite status.</li>
-      <li>Review records, including review time, remembered/forgotten result, next review time, memory phase, and review interval.</li>
-      <li>Handwritten memos, image memos, and local annotations you add to image memos.</li>
-      <li>App settings, such as default review frequency, default add method, local notification switch, badge switch, reminder time, daily review cutoff time, sound feedback, exam sprint mode, and memo lock.</li>
-      <li>Check-in records and streak count.</li>
-    </ul>
-
-    <h2>2. Where Data Is Stored</h2>
-    <p>This data is stored locally on your device first. Memos, review records, and settings are stored using local system storage. Handwritten images and image memos are stored in the app's local sandbox, with necessary data copies saved when available so they can display after iCloud sync.</p>
-    <p>The app does not operate developer-run servers, does not upload your memos, handwritten images, image memos, review records, or check-in records to developer servers, and does not sell or share them with third parties. iCloud sync is provided by Apple and controlled by your Apple ID, iCloud settings, and Apple's privacy policy.</p>
-
-    <h2>3. Camera, Photo Library, Local Notifications, and Badge</h2>
-    <p>If you choose to add an image memo, the app may request access to your photo library or camera so you can select or take a photo as memo content. Selected or captured images are used only for local memo creation and review.</p>
-    <p>If you enable notifications, the app uses iOS local notifications to remind you to review memos at the times you choose. The app does not use a remote push notification server.</p>
-
-    <h2>4. What We Do Not Do</h2>
-    <ul>
-      <li>We do not collect account identity information.</li>
-      <li>We do not upload your memo content to developer-operated servers, sell it, or share it.</li>
-      <li>We do not use ad tracking or cross-app tracking.</li>
-      <li>We do not use AI or OCR to read your handwriting.</li>
-      <li>We do not sync your data through a developer-operated cloud database.</li>
-    </ul>
-
-    <h2>5. Data Deletion</h2>
-    <p>You can delete memos inside the app. When a memo is deleted, the app also deletes its related review records. If the memo has a handwritten image or image memo file, the corresponding local image file is deleted as well.</p>
-
-    <h2>6. Children's Privacy</h2>
-    <p>The app is not designed to knowingly collect personal information from children, and it does not actively collect user identity information.</p>
-
-    <h2>7. Policy Changes</h2>
-    <p>If future versions add accounts, developer-operated cloud sync, AI, OCR, analytics, or other features that process more data, we will update this Privacy Policy before those features launch and request authorization when required.</p>
-
-    <h2>8. Contact Us</h2>
-    <p>If you have questions about this Privacy Policy or our data handling, please email <a href="mailto:3528872473@qq.com">3528872473@qq.com</a>.</p>
+  <main>
+    <article class="policy sheet">
+      <h1>Memo Clock Privacy Policy</h1>
+      <p class="updated">Last updated: October 14, 2026</p>
+      <p>Memo Clock (“the app”) is for recording and reviewing study cards. The app has no accounts, the developer runs no servers, and the app contains no analytics, advertising or tracking tools and no in-app purchases. What you record is stored on your device; if your device is signed in to iCloud, it is also stored in the private iCloud space of your own Apple ID and synced between your devices. The developer cannot see or obtain any of it.</p>
+      <h2>1. What the app stores</h2>
+      <p>To make its features work, the app stores:</p>
+      <ul>
+        <li><strong>Cards</strong>: title, prompt, answer, explanation, the name of the deck it is in, type and favorite status; handwriting strokes and handwriting images; photos and the masks drawn on them; and the text recognized in handwriting and photos.</li>
+        <li><strong>Review history</strong>: when each review happened, the grade you chose (Forgot, Vague, Remember, Mastered) and whether it was a self-test, plus the next review time and memory-model state worked out from it.</li>
+        <li><strong>Handwritten notebooks and PDFs</strong>: each notebook’s name, cover and paper; the strokes on every page; imported PDF pages; and the text recognized on the pages.</li>
+        <li><strong>Notes</strong>: title and text; a note jotted during review also remembers the card it belongs to.</li>
+        <li>Widgets on the Today page and beside the cards in Review: which widgets you placed, their order and size, and what you entered in them, such as countdowns, timetables, to-dos, habit check-ins, counters, links, sticky-note text and handwriting, photos you chose, and pomodoro lengths and the number finished each day.</li>
+        <li><strong>Focus history</strong>: the start and end of each stretch of focus (studying in the app, or a pomodoro running), kept for about the last 400 days.</li>
+        <li><strong>Check-ins and settings</strong>: the days you completed your reviews, and settings such as review mode, daily goals, reminder times, sound and haptics, and language.</li>
+        <li><strong>Desk layout</strong>: whether the Desk is Aligned or Free, and where each item lies when arranged freely.</li>
+        <li><strong>Inbox</strong>: text, links and images you send to the app from the system Share menu.</li>
+        <li><strong>Other app state</strong>: unfinished drafts, progress through an unfinished review round, actions you can still undo, which cards were imported recently, and the counts used to decide when to ask you to rate the app on the App Store (time used, number of sessions and when you were last asked).</li>
+      </ul>
+      <h2>2. Where it is kept</h2>
+      <ul>
+        <li><strong>Your device</strong>: everything above is stored in the app’s storage on your device.</li>
+        <li><strong>iCloud sync</strong>: if your device is signed in to iCloud, cards, review history, handwritten notebooks and PDFs, notes, and the Today and Review widgets (including photos in widgets) sync automatically through Apple’s iCloud to your other devices signed in to the same Apple ID.</li>
+        <li><strong>Study data in iCloud</strong>: when you tap “Upload to iCloud” in Settings › iCloud Sync, or after you complete your reviews for the day, the app saves a copy of your study data in your private iCloud space. It contains the content synced above, plus check-ins, focus history, settings, deletion records, the upload time and the type of device it came from (for example, iPad). It is read when you tap “Sync from iCloud to This Device” on another device.</li>
+        <li><strong>This device only</strong>: the desk layout, inbox items not yet saved as cards, drafts, review progress and undo records, and the rating-prompt counts are never synced or stored in iCloud.</li>
+        <li><strong>System widgets</strong>: so that Memo Clock widgets on the Home Screen and Lock Screen have something to show, the app writes a summary on your device: how many cards are due on each of the next few days, how many you reviewed today, the titles and decks of the next 4 cards due, how many cards are due in each deck, your countdowns, today’s focus minutes and the pomodoro status. The summary stays on this device and only the app and its widgets can read it. Widgets on the Lock Screen can be seen while the device is locked.</li>
+        <li><strong>Recitation lock</strong>: when Recitation lock is on, a Live Activity on the Lock Screen shows the title of the locked card and the time left. It is created on your device.</li>
+        <li><strong>Device backups</strong>: depending on your system settings, iCloud Backup or a computer backup may also include the app’s data.</li>
+      </ul>
+      <p>Apart from the syncing and storage through Apple’s iCloud described above, the app does not send your content anywhere. The developer does not sell, rent or share your content with anyone. iCloud is provided by Apple and is governed by your Apple ID settings and Apple’s Privacy Policy.</p>
+      <h2>3. Processing done on your device</h2>
+      <ul>
+        <li><strong>Text recognition</strong>: Chinese and English in handwriting and photos are read on your device by Apple’s built-in text recognition, only so you can find them with search in the app. The recognized text is stored with the cards and notebooks and syncs through iCloud.</li>
+        <li><strong>Formulas</strong>: formulas are typeset on your device by a component built into the app; no network is needed.</li>
+        <li><strong>Ambient sounds</strong>: rain, waves and the other sounds are synthesized live on your device; no audio is downloaded. While one plays, Control Center and the Lock Screen show the name of the sound.</li>
+        <li><strong>Anki import</strong>: the .apkg file you choose is read on your device, and its text, images and review history (including how long each answer took) become cards and review history; the file itself is not kept or uploaded.</li>
+        <li><strong>PDF import</strong>: each page of the PDF you choose is saved into the matching notebook and syncs through iCloud.</li>
+        <li><strong>Sharing cards</strong>: only when you select cards and tap “Share” does the app create a share file, which it hands to the system Share menu so you decide who receives it.</li>
+        <li><strong>Links in widgets</strong>: opened in the system browser only when you tap them.</li>
+        <li><strong>Making cards with AI</strong>: this feature only produces a set of instructions (a prompt) for you to copy or export. Whether you give it and your materials to an outside AI service is your decision and is governed by that service’s privacy policy. When you paste the AI’s result back, it is read and imported on your device. The app itself connects to no AI service.</li>
+      </ul>
+      <h2>4. System permissions</h2>
+      <ul>
+        <li><strong>Camera</strong>: requested only when you choose to take a photo. The photo is saved as card content.</li>
+        <li><strong>Photos</strong>: picking from your library uses the system photo picker; the app receives only the photos you select and cannot see the rest of your library.</li>
+        <li><strong>Notifications</strong>: requested when you turn on Notifications or start a pomodoro for the first time. Review reminders and pomodoro alerts are scheduled on your device and contain no card content; the app has no push server of its own.</li>
+        <li><strong>App icon badge</strong>: when “Show due count on app icon” is on, the icon shows how many cards are due today.</li>
+        <li>The app does not use the microphone, location, contacts, calendars or health data, and does not read other files on your device except files you choose yourself in the file picker (a PDF, an Anki deck or a card share file).</li>
+      </ul>
+      <h2>5. What the app does not do</h2>
+      <ul>
+        <li>It has no accounts and collects no identity information such as your name, phone number or email address.</li>
+        <li>It contains no analytics, advertising or tracking tools and does not track you across apps.</li>
+        <li>Apart from syncing and storage through your own iCloud, it does not send your content or the recognized text to any server.</li>
+        <li>It has no in-app purchases or subscriptions. Payment and refunds are handled by Apple through the App Store; the developer never receives your payment details.</li>
+      </ul>
+      <h2>6. Deleting your data</h2>
+      <ul>
+        <li>Deleting a card in the app also deletes its review history and images; deleting a notebook deletes all its pages; deleting a note or a widget deletes what it holds. Deletions sync to your other devices signed in to the same Apple ID.</li>
+        <li>Deleting the app deletes what it stored on that device. Data synced to iCloud and the study data in iCloud are not deleted with it; to delete them, open Settings on your device, tap your name, go to iCloud storage management, find Memo Clock and delete its data.</li>
+        <li>Data in device backups is managed by your backup settings.</li>
+      </ul>
+      <h2>7. Children</h2>
+      <p>The app collects no one’s identity information, including children’s.</p>
+      <h2>8. Changes to this policy</h2>
+      <p>If a future version changes how data is handled, we will update this policy first and update the date both in the app and on the web page.</p>
+      <h2>9. Contact</h2>
+      <p>Questions about this policy or how data is handled: email <a href="mailto:3528872473@qq.com">3528872473@qq.com</a>.</p>
+    </article>
   </main>
 </body>
 </html>
