@@ -10,11 +10,13 @@ GitHub Pages 发布在 `https://wojiaozyh123-hub.github.io/memoclock-pages/`。A
 
 ## 改内容
 
-- 隐私政策只改一处：MemoClock 项目里的 `privacy-2.0.0-zh.md` / `privacy-2.0.0-en.md`（App 内 AppLegal.swift 用的是同一份文字），然后重新生成网页：
+- 隐私政策只改一处：MemoClock 工程里的 `MemoryClockApp/Infrastructure/AppLegal.swift`（App 设置页显示的就是它，中英文各一段）。`privacy.html` / `privacy-en.html` 由 MemoClock 工程里的脚本照它生成，这里不放脚本、不手改：
 
   ```
-  python3 tools/build_privacy.py <privacy-zh.md> <privacy-en.md>
+  python3 <MemoClock 工程>/tools/build_privacy.py --site <本仓库>
   ```
+
+  同一个脚本也写 MemoClock 工程里的 `PrivacyPolicy.md`；加 `--check` 只检查哪一份没跟上。
 
 - 首页由 `tools/build_home.py` 生成（文字、书桌物件、今天页小组件都在脚本里），改完运行 `python3 tools/build_home.py`。卡片和小组件里的公式是 App 自带 KaTeX 预先排好的，存在 `tools/home-formulas.json`。
 - 小组件里的插画（猫、沙漏、台灯、咖啡）和收音机是 App 源码里的 SVG 原样拷出来的：`python3 tools/extract_art.py <App 的 MemoryClockApp/UI/HomeBoard/Widgets>` 重新拷到 `tools/widget-art.json`。
