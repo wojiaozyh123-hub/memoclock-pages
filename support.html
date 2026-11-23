@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>支持 · Memo Clock-记忆时钟</title>
-  <meta name="description" content="Memo Clock-记忆时钟的常见问题和联系方式：同步、换设备、导入 Anki、手写、备份与删除。">
+  <title>支持 · Memo Clock 记忆时钟</title>
+  <meta name="description" content="Memo Clock 记忆时钟的常见问题和联系方式：记录本怎么背、说一句、导入 Anki、手写公式、同步和换设备、备份与删除。">
   <link rel="icon" href="assets/icon-64.png">
   <link rel="apple-touch-icon" href="assets/icon-256.png">
   <link rel="stylesheet" href="styles.css">
@@ -25,17 +25,20 @@
       <section class="contact sheet" aria-labelledby="contact-title">
         <h2 id="contact-title">发邮件给开发者</h2>
         <a class="mail" href="mailto:3528872473@qq.com?subject=Memo%20Clock%20%E6%94%AF%E6%8C%81">3528872473@qq.com</a>
-        <p>写上设备型号、系统版本和 App 版本（在 App 的<b class="ui">设置 › 关于</b>里），附上截图会更快。</p>
+        <p>写上设备型号、系统版本和 App 版本（在 App 的<b class="ui">设置 › 关于</b>里，那里的<b class="ui">联系支持</b>也能直接写邮件），附上截图会更快。</p>
       </section>
       <nav class="toc" aria-label="常见问题">
-        <a href="#new-device">换了新 iPad，卡片怎么过去？</a>
-        <a href="#sync">两台设备上的内容不一样？</a>
-        <a href="#anki">怎么从 Anki 导入？</a>
-        <a href="#handwriting">手写要什么设备？写的字能搜到吗？</a>
-        <a href="#occlusion">想把一道题拍下来，遮住答案背？</a>
+        <a href="#logbook">记录本里记的东西怎么背？</a>
+        <a href="#say-it">“说一句”要什么权限？声音会存下来吗？</a>
         <a href="#schedule">下次什么时候复习是怎么排的？</a>
         <a href="#reminders">收不到复习提醒？</a>
-        <a href="#backup">怎么备份？怎么删除数据？</a>
+        <a href="#anki">怎么从 Anki 导入？</a>
+        <a href="#photo">想把一道题拍下来，遮住答案背？</a>
+        <a href="#handwriting">手写要什么设备？写的字能搜到吗？</a>
+        <a href="#formulas">手写公式为什么要先下载？</a>
+        <a href="#new-device">换了新 iPad 或 iPhone，东西怎么过去？</a>
+        <a href="#sync">两台设备上的内容不一样？</a>
+        <a href="#backup">怎么备份、分享、删除数据？</a>
         <a href="#storage">打开后显示“存储暂不可用”？</a>
         <a href="#price">要另外付费吗？</a>
       </nav>
@@ -43,10 +46,63 @@
 
     <div class="faq sheet">
       <section class="qa">
-        <h2 id="new-device">换了新 iPad，卡片怎么过去？</h2>
-        <p>在新设备上登录同一个 Apple ID 并打开 iCloud，再安装、打开 Memo Clock。卡片、复习记录、手写笔记和 PDF、便签、今天页的小组件会自动同步过来，内容多的话要等几分钟。</p>
-        <p>打卡天数、专注时长和设置不在自动同步里：先在旧设备的<b class="ui">设置 › iCloud 同步</b>里点<b class="ui">上传到 iCloud</b>，再在新设备上点<b class="ui">从 iCloud 同步到这台设备</b>。</p>
-        <p>书桌上自由摆放的位置每台设备各自保存，不会跟过去。</p>
+        <h2 id="logbook">记录本里记的东西怎么背？</h2>
+        <p>在记录本里写一格：右栏写要记住的内容，左栏写提示或答案。按住这一格再松开，点<b class="ui">背这一格</b>，它就进了复习，是一张翻面卡：正面是右栏，翻过来是左栏。左栏空着的，看完直接评分；右栏空着的不会成卡。</p>
+        <p>想整本都背，点记录本顶栏的 <b class="ui">⋯</b>，打开<b class="ui">这一本都进复习</b>：已经写的和以后写的、两栏都有字的格子，都会进复习。哪一格不想背了，按住它点<b class="ui">不背这一格</b>。</p>
+        <p>用荧光笔<b class="ui">遮住</b>的字，是在本子里自己考自己用的，不进复习。</p>
+      </section>
+
+      <section class="qa">
+        <h2 id="say-it">“说一句”要什么权限？声音会存下来吗？</h2>
+        <p>在记录本每页最后那个空格上按住说话，松手就记成一格；说着说着手指滑到另一栏，后面的话就记进另一栏。主屏小组件里也有“说一句”，iOS 18 起还能放进控制中心、锁屏和操作按钮。</p>
+        <p>第一次用，系统会问能不能用麦克风和语音识别。说的话在你的设备上转成文字，声音不保存。听哪种语言，在<b class="ui">设置 › 记录本 › 说一句的语言</b>里选；第一次用某种语言时，系统可能要先下载它，记得连网。</p>
+      </section>
+
+      <section class="qa">
+        <h2 id="schedule">下次什么时候复习是怎么排的？</h2>
+        <p>翻开答案后点<b class="ui">忘记</b>、<b class="ui">模糊</b>或<b class="ui">记得</b>。忘记和模糊的卡这一轮还会再来几次，键下面写着“还要记得 N 次”；<b class="ui">记得</b>下面写着这张下次哪天再来，间隔由记忆算法按你自己的复习记录算出来。</p>
+        <p>每天第一次打开时，App 会定好今天这一批：到期的卡，最多到<b class="ui">设置 › 复习 › 每天最多复习</b>设的张数，放不下的往后排到有空的那天。<b class="ui">复习强度</b>可以选<b class="ui">轻松</b>、<b class="ui">标准</b>或<b class="ui">扎实</b>，越扎实隔得越近。</p>
+        <p>想自己改某一张的时间：在卡组里按住这张卡，选<b class="ui">调整复习时间</b>。</p>
+      </section>
+
+      <section class="qa">
+        <h2 id="reminders">收不到复习提醒？</h2>
+        <p>第一次复习完一轮，App 会问你每天几点提醒，点<b class="ui">好</b>以后系统才会问能不能发通知。之后在<b class="ui">设置 › 提醒</b>里打开<b class="ui">通知提醒</b>，再打开<b class="ui">早上提醒</b>或<b class="ui">晚上提醒</b>，选好时间；同时在系统“设置 › 通知”里找到 Memo Clock，允许通知。</p>
+      </section>
+
+      <section class="qa">
+        <h2 id="anki">怎么从 Anki 导入？</h2>
+        <ol>
+          <li>在电脑版 Anki 里导出牌组，格式选“Anki 牌组包（.apkg）”，勾选“支持旧版 Anki”（Support older Anki versions）。</li>
+          <li>把 .apkg 文件存进 iPad 或 iPhone 的“文件”App，隔空投送或 iCloud 云盘都行。</li>
+          <li>在 Memo Clock 里点 ＋，选<b class="ui">导入 Anki 牌组或分享文件</b>（iPhone 上是<b class="ui">导入文件</b>），选中这个文件。</li>
+        </ol>
+        <p>学过的卡，会问你<b class="ui">保留原来的进度</b>还是<b class="ui">当新卡从头学</b>；没学过的新卡，会问你分几天学。文字、公式、图片和填空题都会带过来；声音和文字格式（颜色、加粗）不会。已经有的卡片会跳过。</p>
+      </section>
+
+      <section class="qa">
+        <h2 id="photo">想把一道题拍下来，遮住答案背？</h2>
+        <p>点 ＋，选<b class="ui">拍照</b>或<b class="ui">扫描</b>。在照片上选中要的字，放进答案；没有字可选的地方，点<b class="ui">改用框</b>，框下一块图。</p>
+        <p>再点<b class="ui">遮住</b>，在答案上点一个字或划一段，它就遮住了；点<b class="ui">确认</b>，再保存。复习时遮住的地方是一条黄条，点一下揭开。用<b class="ui">记一条</b>打字做的卡也一样。想把照片记进记录本，点底部的<b class="ui">记进</b>那本记录本。</p>
+      </section>
+
+      <section class="qa">
+        <h2 id="handwriting">手写要什么设备？写的字能搜到吗？</h2>
+        <p>在 iPad 上用 Apple Pencil 写：点 ＋，选<b class="ui">手写笔记</b>，纸张有 A4、Letter、16:9 等尺寸。导入的 PDF、Word、PPT 也能直接在上面写。</p>
+        <p>手写和照片里的中文、英文会在设备上自动识别，之后在书桌的搜索框里（外接键盘按 ⌘F）就能搜到，结果一行一条，写着命中的那句话和它在哪。刚写完要等一会儿；太潦草的字可能认不出来，但笔迹本身不受影响。</p>
+      </section>
+
+      <section class="qa">
+        <h2 id="formulas">手写公式为什么要先下载？</h2>
+        <p>公式键（分式、根号、上下标、积分、矩阵、化学式等）不用下载。手写一个公式让它自动排好，要用一个约 185 MB 的识别模型：第一次点<b class="ui">写</b>的时候问你，点了<b class="ui">下载</b>才会下；下好以后在你的设备上识别。</p>
+        <p>需要 iOS 18 或更新的系统。不想要了，在<b class="ui">设置 › 记一条 › 手写识别公式</b>里删掉。</p>
+      </section>
+
+      <section class="qa">
+        <h2 id="new-device">换了新 iPad 或 iPhone，东西怎么过去？</h2>
+        <p>在新设备上登录同一个 Apple ID 并打开 iCloud，再安装、打开 Memo Clock。卡组和复习记录、记录本、笔记本和 PDF、单词本和背词进度、今天页的小组件、打卡，都会通过你自己的 iCloud 自动过去，内容多的话要等几分钟。</p>
+        <p>专注时长不在自动同步里：先在旧设备的<b class="ui">设置 › iCloud 同步</b>里点<b class="ui">上传到 iCloud</b>，再在新设备上点<b class="ui">从 iCloud 同步到这台设备</b>。同步按卡片合并，不会删掉新设备上已有的东西。</p>
+        <p>书桌上东西摆在哪，每台设备各自保存，不会跟过去。</p>
       </section>
 
       <section class="qa">
@@ -60,41 +116,10 @@
       </section>
 
       <section class="qa">
-        <h2 id="anki">怎么从 Anki 导入？</h2>
-        <ol>
-          <li>在电脑版 Anki 里导出牌组，格式选“Anki 牌组包（.apkg）”，勾选“支持旧版 Anki”（Support older Anki versions）。</li>
-          <li>把 .apkg 文件存进 iPad 的“文件”App，隔空投送或 iCloud 云盘都行。</li>
-          <li>在 Memo Clock 里点右上角的 ＋，选<b class="ui">导入 PDF 或文件</b>，选中这个文件。</li>
-        </ol>
-        <p>文字、公式、图片、填空题和你在 Anki 里的复习进度都会带过来；声音和文字格式（颜色、加粗）不会。已经有的卡片会跳过，没学过的新卡每天排 30 张。</p>
-      </section>
-
-      <section class="qa">
-        <h2 id="handwriting">手写要什么设备？写的字能搜到吗？</h2>
-        <p>在 iPad 上用 Apple Pencil 写：记一条时点手写，或者新建一本手写笔记。</p>
-        <p>手写和照片里的中文、英文会在 iPad 本机自动识别，之后在书桌顶部的搜索框里就能搜到。刚写完要等一会儿才搜得到；太潦草的字可能认不出来，但笔迹本身不受影响。</p>
-      </section>
-
-      <section class="qa">
-        <h2 id="occlusion">想把一道题拍下来，遮住答案背？</h2>
-        <p>记一条时点图片，拍照或从相册选一张，在图上框出要遮住的地方，每个框会成为一张卡。复习时这些地方先遮着，翻开再看。</p>
-      </section>
-
-      <section class="qa">
-        <h2 id="schedule">下次什么时候复习是怎么排的？</h2>
-        <p>翻开答案后，按记得的程度点<b class="ui">忘了</b>、<b class="ui">模糊</b>、<b class="ui">记得</b>或<b class="ui">熟练</b>，每一档下面写着下次什么时候再出现：忘了的这一轮再来，越熟隔得越久，间隔由记忆算法按你的复习记录算出。</p>
-        <p>想自己改，在卡片上长按，选<b class="ui">调整复习时间</b>。每天最晚复习到几点，在<b class="ui">设置 › 复习</b>里改。</p>
-      </section>
-
-      <section class="qa">
-        <h2 id="reminders">收不到复习提醒？</h2>
-        <p>在<b class="ui">设置 › 提醒</b>里打开<b class="ui">通知提醒</b>，再选早上、晚上提醒的时间；同时在系统的“设置 › 通知”里找到 Memo Clock，允许通知。</p>
-      </section>
-
-      <section class="qa">
-        <h2 id="backup">怎么备份？怎么删除数据？</h2>
-        <p>登录 iCloud 后，内容会自动存进你自己的 iCloud；每天完成复习打卡后，还会自动上传一份学习数据，你也可以随时在<b class="ui">设置 › iCloud 同步</b>里点<b class="ui">上传到 iCloud</b>。想把一组卡另存一份或者发给同学：打开这组卡，点右上角<b class="ui">选择</b>，选好后点分享，生成的文件可以用<b class="ui">导入 PDF 或文件</b>导回来。</p>
-        <p>删除一样东西：在书桌或卡片上长按，选<b class="ui">删除</b>，会同步删掉其他设备上的同一份。想全部清除：删掉各台设备上的 Memo Clock，再到系统“设置”里点你的名字，进入 iCloud 的储存空间管理，找到 Memo Clock 删除它的数据。</p>
+        <h2 id="backup">怎么备份、分享、删除数据？</h2>
+        <p>内容存在你自己的 iCloud 里。另外，<b class="ui">设置 › iCloud 同步 › 备份与恢复</b>能把全部内容存成一个 .memoclockbackup 文件；<b class="ui">自动备份</b>默认每周一次（也能选每天或关掉），存在“文件”App 里 iCloud 云盘的 Memo Clock 文件夹，没有 iCloud 时存在本机，只留最近 4 份。恢复是合并，不会删掉现有的内容，恢复后还能撤销。</p>
+        <p>想把一组卡发给同学：打开卡组，点 <b class="ui">⋯ › 分享这一组</b>，选 PDF、<b class="ui">表格（CSV）</b>、<b class="ui">Anki 卡包</b>或 <b class="ui">Memo Clock 文件</b>。笔记本和记录本也能<b class="ui">分享这一本</b>，对方点开先看预览，再放到自己的书桌上。</p>
+        <p>删除一样东西：在书桌上长按，选<b class="ui">删除</b>，其他设备上的同一份也会删掉。删掉的东西在<b class="ui">最近删除</b>里留 30 天（书桌顶栏的 <b class="ui">···</b> 里），可以放回。想全部清除：删掉各台设备上的 Memo Clock，到系统“设置”里点你的名字，进入 iCloud 的储存空间管理，找到 Memo Clock 删除它的数据，再删掉 iCloud 云盘里的 Memo Clock 文件夹。</p>
         <p>具体保存了什么、存在哪里，见<a href="privacy.html">隐私政策</a>。</p>
       </section>
 
@@ -105,7 +130,7 @@
 
       <section class="qa">
         <h2 id="price">要另外付费吗？</h2>
-        <p>不用。买一次，全部功能都能用，没有内购、没有订阅、没有广告。同一个 Apple ID 下的 iPad 和 iPhone 都可以下载，需要 iPadOS 17 / iOS 17 或更新的系统。</p>
+        <p>不用。买一次，全部功能都能用：没有订阅、没有内购、没有广告，也不用注册账号。同一个 Apple ID 下的 iPad 和 iPhone 都可以下载，需要 iPadOS 17 / iOS 17 或更新的系统；手写公式需要 iOS 18。</p>
       </section>
     </div>
   </main>

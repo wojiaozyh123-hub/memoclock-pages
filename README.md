@@ -18,12 +18,11 @@ GitHub Pages 发布在 `https://wojiaozyh123-hub.github.io/memoclock-pages/`。A
 
   同一个脚本也写 MemoClock 工程里的 `PrivacyPolicy.md`；加 `--check` 只检查哪一份没跟上。
 
-- 首页由 `tools/build_home.py` 生成（文字、书桌物件、今天页小组件都在脚本里），改完运行 `python3 tools/build_home.py`。卡片和小组件里的公式是 App 自带 KaTeX 预先排好的，存在 `tools/home-formulas.json`。
+- 首页由 `tools/build_home.py` 生成（文字、书桌物件、今天页小组件都在脚本里，照 App 3.0 的画法和界面文字），改完运行 `python3 tools/build_home.py`。
 - 小组件里的插画（猫、沙漏、台灯、咖啡）和收音机是 App 源码里的 SVG 原样拷出来的：`python3 tools/extract_art.py <App 的 MemoryClockApp/UI/HomeBoard/Widgets>` 重新拷到 `tools/widget-art.json`。
 - 支持页直接改 `support.html` / `support-en.html`。
 
 ## 资源
 
-- `assets/tex/`：纸、牛皮纸、皮面、亚麻纹理，和 App 设计稿同一套。
-- `assets/katex/`：KaTeX 样式和字体（MIT，见 `assets/katex/LICENSE`）。
+- `assets/tex/`：纸、皮面、亚麻纹理，和 App 设计稿同一套。
 - `assets/fonts/memohand-subset.woff`：霞鹜文楷子集，只含首页手写体用到的字（`tools/hand-chars.txt`，由 build_home.py 写出）（SIL OFL 1.1，见 `assets/fonts/OFL.txt`）。首页手写体文字改了要重新取子集：`pyftsubset MemoHand-Regular.ttf --text-file=tools/hand-chars.txt --flavor=woff --output-file=assets/fonts/memohand-subset.woff`。
