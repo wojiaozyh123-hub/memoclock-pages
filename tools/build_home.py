@@ -232,6 +232,33 @@ def widget(size, inner, material="paper", extra="", label=""):
 FILL = '<div class="w-fill"></div>'
 
 
+# 暖纸 (the app from 11 November on): the widgets and the drawings were made in the 2.0 colours —
+# a ground leaning green, cool greys — and the app turns each of those into its warm one as it
+# draws (`SketchInk`'s token table in IllustrationWidgets.swift, the light values). The board is
+# passed through the same table, so it is in the colours the app shows.
+RETONE = {
+    "111317": "1A1814",  # Ink.ink
+    "F3F3EE": "F3F0EA",  # SketchInk.paper (Ink.Light.well)
+    "F8F8F4": "F8F5EE",  # Ink.raised
+    "FDFDFB": "FDFBF5",  # Ink.gridPaper
+    "4E535B": "57524A",  # Ink.lead
+    "7C8088": "706A61",  # Ink.faint
+    "9A9EA5": "A29D96",  # SketchInk.tick
+    "C9CBC4": "CDC8BE",  # SketchInk.weak
+    "EDEDE8": "EDE9E0",  # SketchInk.track (Ink.Light.hairline)
+    "E3E3DD": "E2DDD2",  # Ink.line
+    "E2E3DB": "E1DDD2",
+    "ECEDE6": "EBE7DD",
+    "FAF6EC": "FFFFFF",  # SketchInk.wall: a widget's own white
+    "FFFFFE": "FFFFFF",
+    "F7F6F0": "F7F4EC",
+}
+
+
+def retone(text):
+    return re.sub(r"#([0-9A-Fa-f]{6})\b", lambda m: "#" + RETONE.get(m.group(1).upper(), m.group(1)), text)
+
+
 def mist(hex_color):
     """AgendaColor.mist: a calendar's colour, quieted and warmed to sit on the paper."""
     r, g, b = (int(hex_color[i:i + 2], 16) / 255 for i in (1, 3, 5))
@@ -585,13 +612,13 @@ def w_desk_wordbook(t):
 
 def board_html(t):
     # 30 cells on six columns; 28 on four (w-optional-4 gone), 26 on two (.opt gone): no holes.
-    return "".join([
+    return retone("".join([
         w_today_review(t), w_streak(t), w_focus(t), w_forecast(t),
         w_schedule(t), w_radio(t), w_metrics(t), w_week(t),
         w_cat(t), w_countdown(t), w_timetable(t), w_pomodoro(t), w_clock(t),
         w_write_cell(t), w_hourglass(t), w_desk_deck(t), w_desk_ledger(t),
         w_lamp(t), w_desk_wordbook(t), w_semester(t), w_checklist(t), w_coffee(t),
-    ])
+    ]))
 
 
 # ---------- Words ----------
